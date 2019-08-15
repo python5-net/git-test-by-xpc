@@ -1,5 +1,0 @@
-total 2
--rw-r--r-- 1 TTA786 1049089 68 Aug 12 11:16 branchtest.txt
--rw-r--r-- 1 TTA786 1049089  0 Aug 12 11:18 inbranchtest_make_files.txt
--rw-r--r-- 1 TTA786 1049089 32 Aug 12 11:16 README.md
-drwxr-xr-x 1 TTA786 1049089  0 Aug  8 13:18 test_file/
