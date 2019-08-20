@@ -33,15 +33,15 @@ pipeline {
 		// println "${env.JOB_NAME}/${env.BUILD_NUMBER}"
             }
         }
-
-	post{
-		always{
-			script{
-			sh "echo 假设这是相关清除或者恢复等操作代码"
-			}
-		}
-	}
 	
-
     }
+	
+    post {
+	always{
+	script{
+	sh "echo 这里是相关清除或者恢复环境的操作"
+	}
+	}
+    }
+
 }
