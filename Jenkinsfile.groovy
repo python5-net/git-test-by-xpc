@@ -21,8 +21,8 @@ pipeline {
         stage('Test') { 
             steps {
                 println "Test" 
-            	sh "echo ${JAVA_HOME} "
-		println "上面已经打印出来了java的执行路径java_HOme"
+            	sh "ls -lha "
+		println "上面已经打印出来了"
 	    }
         }
     
