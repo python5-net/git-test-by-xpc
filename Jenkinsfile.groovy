@@ -1,47 +1,26 @@
-pipeline {
-    agent any
-    //{
-//	label 'xxx-agent-机器FirstPipeLine项目测试'
-//	customWorkspace "${env.JOB_NAME}/${env.BUILD_NUMBER}"
-  //  }  
+Pipeline{
 
 
-    stages {
+	agent any
 
-        stage('Build') {
-            steps {
-                println "Build项目开始了by——xpc,下面开始执行shell的命令语句"
-		sh "pwd" 
-		println "打印出了当前所在的目录路径"
-			
-            }
-     }
-
-
-        stage('Test') { 
-            steps {
-                println "Test" 
-            	sh "ls -lha "
-		println "上面已经打印出来了"
-	    }
-        }
-    
-
-    	stage('Deploy') { 
-            steps {
-                println "Deploy 测试输出env.... 下面将没有输出语句 应该直接是succed等语句"
-		// println "${env.JOB_NAME}/${env.BUILD_NUMBER}"
-            }
-        }
-	
-    }
-	
-    post {
-	always{
-	script{
-	sh "echo 这里是相关清除或者恢复环境的操作"
+	environment{
+		unit_test=true
 	}
+
+	stages{
+
+		stage('Example_xpc'){
+			steps{
+				if (unit_test == true){
+					println "这是如果单元测试为true输出的语句"
+					sh 'll -lha'
+					println "上面输出了所在目录的所有文件和详细的说明"
+
+				}
+			}
+		}
 	}
-    }
+
+
 
 }
