@@ -1,8 +1,9 @@
 pipeline {
-    agent {
-	label 'xxx-agent-机器FirstPipeLine项目测试'
-	customWorkspace "${env.JOB_NAME}/${env.BUILD_NUMBER}"
-    }  
+    agent any
+    //{
+//	label 'xxx-agent-机器FirstPipeLine项目测试'
+//	customWorkspace "${env.JOB_NAME}/${env.BUILD_NUMBER}"
+  //  }  
 
 
     stages {
