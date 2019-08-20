@@ -1,9 +1,12 @@
 pipeline {
-    agent any 
+    agent none  
     stages {
-        stage('Build') { 
+        stage('Build') {
+	    agent{ 
+		label '测试节点名称'
+	    }
             steps {
-                println "Build" 
+                println "Build项目开始了by——xpc" 
             }
         }
         stage('Test') { 
