@@ -27,13 +27,21 @@ pipeline {
         }
     
 
-    stage('Deploy') { 
+    	stage('Deploy') { 
             steps {
                 println "Deploy 测试输出env.... 下面将没有输出语句 应该直接是succed等语句"
 		// println "${env.JOB_NAME}/${env.BUILD_NUMBER}"
             }
         }
 
+	post{
+		always{
+			script{
+			sh "echo 假设这是相关清除或者恢复等操作代码"
+			}
+		}
+	}
+	
 
     }
 }
