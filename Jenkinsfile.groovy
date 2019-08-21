@@ -14,13 +14,12 @@ pipeline {
 		steps{
 	println "testis runing "
 	println "判断为true的语句再次执行成功，下面开始测试执行ssh语句"
-	sh "ll -lha"
 		}
 	}
 	
 	stage('deploy'){
 		steps{
-			println "deploy is running "
+		println "deploy is running "
 	}
 	}
     }
