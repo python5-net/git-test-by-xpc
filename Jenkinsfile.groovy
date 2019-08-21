@@ -8,6 +8,14 @@ Pipeline{
 	}
 
 	stages{
+		
+		stage('Build'){
+			steps{
+			println "输出了build的语句~~~"
+			}
+
+		}
+
 
 		stage('Example_xpc'){
 			steps{
