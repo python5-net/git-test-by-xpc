@@ -3,7 +3,10 @@ Pipeline {
    
     stages {
         stage('Example') {
-          println 'hwllo example'
-        }
+    	steps{
+	println 'example is running '
+
+	}
+	}
     }
 }
