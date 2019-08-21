@@ -3,9 +3,7 @@ Pipeline {
    
     stages {
         stage('Example') {
-            steps {
-                println "hello example "
-            }
+          println 'hwllo example'
         }
     }
 }
