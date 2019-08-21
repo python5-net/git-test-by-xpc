@@ -1,19 +1,14 @@
-pipeline {
-    agent any 
+Pipeline {
+    agent any
+    environment {
+        unit_test = true
+    }
     stages {
-        stage('Build') { 
+        stage('Example') {
             steps {
-                println "Build" 
-            }
-        }
-        stage('Test') { 
-            steps {
-                println "Test" 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                println "Deploy" 
+                if(unit_test == true) {
+                   // call run unit test methods
+                }
             }
         }
     }
