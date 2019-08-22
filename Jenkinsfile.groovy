@@ -15,6 +15,9 @@ pipeline {
 	println "testis runing "
 	println "判断为true的语句再次执行成功，下面开始测试执行ssh语句"
 		}
+		if(unit_test==true){
+		println "condition"
+		}
 	}
 	
 	stage('deploy'){
