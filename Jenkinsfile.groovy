@@ -2,6 +2,7 @@ pipeline {
     agent any
    environment{
 	unit_test = true
+	xpc='我是xpc--===---==-=-=-=-=--=-=-=-=-'
    }
 
     stages {
@@ -13,12 +14,11 @@ pipeline {
 	}
 
 	stage('test'){
+	steps{
+	println "输出变量xpc $xpc"
+	println "输出 $unit_test" 
+	}
 	
-	if(unit_test==true){
-	echo 'true is running'
-	}else{ echo 'false is running'}
-	
-
 	}
 
 	stage('deploy'){
