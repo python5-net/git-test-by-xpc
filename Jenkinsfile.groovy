@@ -18,7 +18,17 @@ pipeline {
 			}
 		}
 	}
+	
+	stage('Example if'){
+		steps{
+			if(unit_test==true){
+			// call run unit test
+			}
+		}
+	}
     }
+
+    
   
 
 }
