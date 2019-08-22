@@ -4,28 +4,22 @@ pipeline {
 	unit_test = true
 	xpc='我是xpc--===---==-=-=-=-=--=-=-=-=-'
    }
-
-    stages {
-        
-	stage('Example') {
-    		steps{
-	println 'example is running '
-	}
-	}
-
-	stage('test'){
-	steps{
-	println "输出变量xpc $xpc"
-	println "输出 $unit_test" 
-	}
-	
-	}
-
-	stage('deploy'){
-		steps{
-		println "deploy is running "
-	}
-	}
-
+    parameters{
+	string(name:'userName',defaultValue:'xpcName'description:'please give me a name ')
+	choice(name:'version',choices:['1.1','1.2','1.3'],description:'select the version to test')
+	booleanParam(name:'is_boy',defaultValue:true,description:'you are boy or not ')
     }
+    stages{
+	stage('test'){
+		steps{
+			script{
+				sh 'java -version'
+				sh 'll -lha'
+				println '输出了java版本信息和当前目录信息'
+			}
+		}
+	}
+    }
+  
+
 }
