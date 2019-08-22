@@ -27,9 +27,19 @@ pipeline {
 			println '代替删除了if语句'
 		}
 	}
-    }
+	
+	stage('deploy xpc Demo'){
+		
+		when{
+			expression{
+				return (unit_test=='true')
+			}
 
-    
-  
+		}
+		steps{
+			echo 'unit_test==true 的执行语句'
+		}
+         }
+    }
 
 }
