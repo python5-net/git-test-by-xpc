@@ -13,9 +13,8 @@ pipeline {
 	}
 
 	stage('test'){
-	if (unit_test==true){
-		println "hello if。。。"
-	}
+	
+	println "hello test..."
 
 	}
 
