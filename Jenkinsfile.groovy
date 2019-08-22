@@ -14,9 +14,10 @@ pipeline {
 
 	stage('test'){
 	
-	steps{
-	println "(ー`´ー)"
-	}
+	if(unit_test==true){
+	echo 'true is running'
+	}else{ echo 'false is running'}
+	
 
 	}
 
