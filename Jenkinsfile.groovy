@@ -14,7 +14,7 @@ pipeline {
 		steps{
 			script{
 				sh 'java -version'
-				sh 'll -lha'
+				println 'hello 脚本式pipe构建 删除了sh的ll命令'
 			}
 		}
 	}
