@@ -21,9 +21,10 @@ pipeline {
 	
 	stage('Example if'){
 		steps{
-			if(unit_test==true){
+			// if(unit_test==true){
 			// call run unit test
-			}
+			//}
+			println '代替删除了if语句'
 		}
 	}
     }
