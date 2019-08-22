@@ -14,7 +14,9 @@ pipeline {
 
 	stage('test'){
 	
-	println "hello test..."
+	steps{
+	println "(ー`´ー)"
+	}
 
 	}
 
