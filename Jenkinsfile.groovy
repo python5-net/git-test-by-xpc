@@ -15,7 +15,6 @@ pipeline {
 			script{
 				sh 'java -version'
 				sh 'll -lha'
-				println '输出了java版本信息和当前目录信息'
 			}
 		}
 	}
