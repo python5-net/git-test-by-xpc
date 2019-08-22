@@ -32,7 +32,7 @@ pipeline {
 		
 		when{
 			expression{
-				return (unit_test=='true')
+				return (unit_test)
 			}
 		}
 		steps{
