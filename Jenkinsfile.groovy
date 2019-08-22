@@ -1,14 +1,14 @@
 pipeline {
     agent any
    environment{
-	unit_test = true
+	unit_test = false
 	xpc='我是xpc--===---==-=-=-=-=--=-=-=-=-'
    }
-    parameters{
-	string(name:'userName',defaultValue:'xpcName',description:'please give me a name ')
-	choice(name:'version',choices:['1.1','1.2','1.3'],description:'select the version to test')
-	booleanParam(name:'is_boy',defaultValue:true,description:'you are boy or not ')
-    }
+  //  parameters{
+ //	string(name:'userName',defaultValue:'xpcName',description:'please give me a name ')
+//	choice(name:'version',choices:['1.1','1.2','1.3'],description:'select the version to test')
+//	booleanParam(name:'is_boy',defaultValue:true,description:'you are boy or not ')
+//  }
     stages{
 	stage('test'){
 		steps{
@@ -34,7 +34,6 @@ pipeline {
 			expression{
 				return (unit_test=='true')
 			}
-
 		}
 		steps{
 			echo 'unit_test==true 的执行语句'
