@@ -13,6 +13,16 @@ pipeline{
 			    }
 		        }
 		    }
+		
+		}
+		
+		stage('查看dir和路径相关'){
+			steps{
+			script{
+				sh(ls -al ${env.WORKSPACE})
+				sh(echo '输出当前的文件路径')
+				}
+				}		
 		}
 	}
 
