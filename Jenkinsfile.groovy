@@ -38,6 +38,9 @@ pipeline{
 				sh 'ls -lha'
 
 					}
+				sh 'pwd'
+				sh("ls -al ${env.WORKSPACE}")
+				println '回到了原来工作路径了？吗'
 			}
 		}
 	}
