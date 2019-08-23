@@ -52,9 +52,24 @@ pipeline{
 
 				file_contents=readFile json_file
 				println file_contents
+				
 			}
 		}
-	}
+		}
+
+		stage('retryAndSleep'){
+			steps{
+			script{
+				try{
+				retyr(3){
+				println "here we are test retyr function"
+				sleep 5
+				println 10/0
+					}
+					}catch(Exception e){ println e }
+				}
+				}
+			}
 
 
 	}
