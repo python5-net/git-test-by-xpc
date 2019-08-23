@@ -52,7 +52,8 @@ pipeline{
 
 				file_contents=readFile json_file
 				println file_contents
-				
+				println '即将输出 当前的分支的名字'
+				println "当前分支的名字为---- ${env.BRANCH_NAME}"
 			}
 		}
 		}
