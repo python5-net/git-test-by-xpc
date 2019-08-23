@@ -21,7 +21,7 @@ pipeline{
 			script{
 				sh("ls -al ${env.WORKSPACE}")
 				sh("echo 输出当前的文件路径 ")
-				dir("../test/")
+				sh("cd ../test/")
 				sh('ls -lah ${env.WORKSPACE}')
 				}
 				}		
