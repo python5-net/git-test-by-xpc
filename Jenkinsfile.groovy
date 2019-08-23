@@ -33,6 +33,9 @@ pipeline{
 				dir('../test/'){
 				
 				sh('ls -lha ')
+				sh('echo 将执行清除当前目录的所有的文件')
+				deleteDir()
+				sh 'ls -lha'
 
 					}
 			}
