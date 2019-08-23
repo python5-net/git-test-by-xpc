@@ -27,6 +27,16 @@ pipeline{
 				}
 				}		
 		}
+		
+		stage('测试切换目录'){
+			steps{
+				dir('../test/'){
+				
+				sh('ls -lha ')
+
+					}
+			}
+		}
 	}
 
 
