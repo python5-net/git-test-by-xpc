@@ -47,7 +47,7 @@ pipeline{
 		stage('init'){
 			steps{
 			script{
-				json_file='${env.WORKSPACE}/testdata/test_json.json'
+				json_file="${env.WORKSPACE}/testdata/test_json.json"
 				println json_file
 
 				file_contents=readFile json_file
