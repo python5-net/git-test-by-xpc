@@ -61,7 +61,7 @@ pipeline{
 			steps{
 			script{
 				try{
-				retyr(3){
+				retry(3){
 				println "here we are test retyr function"
 				sleep 5
 				println 10/0
