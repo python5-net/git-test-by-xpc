@@ -23,6 +23,7 @@ pipeline{
 				sh("echo 输出当前的文件路径 ")
 				sh("cd ../test/")
 				sh('ls -lah ')
+				sh('pwd')
 				}
 				}		
 		}
