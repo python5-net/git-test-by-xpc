@@ -43,6 +43,18 @@ pipeline{
 				println '回到了原来工作路径了？吗'
 			}
 		}
+		
+		stage('init'){
+			steps{
+				script{
+				json_file='${env.WORKSPACE}/testdata/test_json.json'
+				file_contents=readFile json_file
+				println file_contents
+			}
+		}
+	}
+
+
 	}
 
 
