@@ -44,38 +44,10 @@ pipeline{
 			}
 		}
 		
-		stage('init'){
-			steps{
-			script{
-				json_file="${env.WORKSPACE}/testdata/test_json.json"
-				println json_file
 
-				file_contents=readFile json_file
-				println file_contents
-				println '即将输出 当前的分支的名字'
-				println "当前分支的名字为---- " $env.BRANCH_NAME
-			}
-		}
-		}
-
-		stage('retryAndSleep'){
-			steps{
-			script{
-				try{
-				retry(3){
-				println "here we are test retyr function"
-				sleep 5
-				println 10/0
-					}
-					}catch(Exception e){ println e }
-				}
-				}
-			}
 
 
 	}
-
-
 
 
 
