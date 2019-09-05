@@ -46,7 +46,7 @@ pipeline{
 		stage('改为测试bash命令	'){
 			steps{
 				
-				sh (''' ssh 10.1.1.6 " mkdir '10116-file';echo '远程创建了一个文件';ls -lha > xpc.txt" ''')
+				sh ( 'ssh 10.1.1.6 " mkdir 10116-file;echo 远程创建了一个文件;ls -lha > xpc.txt'  )
 	
 
 				}
