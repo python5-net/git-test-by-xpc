@@ -1,10 +1,10 @@
+#!/bin/expect
+
 pipeline{
 
 	agent any
 	stages{
 		
-		stage('flow control'){
-		    steps{
 			script{
 			    if (10==10){
 			    println "pass (～￣▽￣)～了"
@@ -46,7 +46,7 @@ pipeline{
 		
 		stage('测试shell的spawn命令了'){
 			steps{
-				sh ('#!/bin/expect')
+				
 				sh ('spawn ssh 10.1.1.6')
 				sh ('expect "]*"')
 				sh ('send touch 8888.txt')
