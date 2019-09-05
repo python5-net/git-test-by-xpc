@@ -1,4 +1,3 @@
-#!/bin/expect
 
 pipeline{
 
@@ -44,13 +43,10 @@ pipeline{
 			}
 		}
 		
-		stage('测试shell的spawn命令了'){
+		stage('改为测试bash命令	'){
 			steps{
 				
-				sh ('spawn ssh 10.1.1.6')
-				sh ('expect "]*"')
-				sh ('send touch 8888.txt')
-				sh ('expect "]*"')
+				sh (''' ssh 10.1.1.6 " mkdir '10116-file';echo '远程创建了一个文件';ls -lha > xpc.txt" ''')
 	
 
 				}
