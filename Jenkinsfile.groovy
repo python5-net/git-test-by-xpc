@@ -46,6 +46,7 @@ pipeline{
 		
 		stage('测试shell的spawn命令了'){
 			steps{
+				sh ('#!/bin/expect')
 				sh ('spawn ssh 10.1.1.6')
 				sh ('expect "]*"')
 				sh ('send touch 8888.txt')
