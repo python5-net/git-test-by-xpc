@@ -28,12 +28,12 @@ pipeline{
 				}		
 		}
 		
-		stage('测试ssh远程操作command'){
-			steps{
-				sh('ssh 10.1.1.6 " mkdir 10116-file;echo 远程创建了一个文件;ls -lha > xpc.txt"')
-				
-			}
-		}
+//		stage('测试ssh远程操作command'){
+//			steps{
+//				sh('ssh 10.1.1.6 " mkdir 10116-file;echo 远程创建了一个文件;ls -lha > xpc.txt"')
+//				
+//			}
+//		}
 		
 
 
