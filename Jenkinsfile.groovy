@@ -1,15 +1,14 @@
 pipeline { 
     agent any 
 
-    parameters {
-        省略内容……
-    }
-    environment {
-        省略内容……
-    }
-    stages {
-        省略内容……
-    }
+	stages{
+
+		stage('test email'){
+		sh('echo hello world')
+			}
+		}
+
+
     post {
         success {
             emailext (
