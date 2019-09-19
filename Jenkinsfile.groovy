@@ -5,9 +5,11 @@ pipeline {
 
 		stage('test email')
 		{
+			steps{
 			script{
 		sh('echo hello world')
 
+		}
 		}
 			}
 		}
