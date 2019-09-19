@@ -1,45 +1,36 @@
-pipeline{
+pipeline { 
+    agent any 
 
-	agent any
-	stages{
-		
-		stage('flow control'){
-		    steps{
-			script{
-			    if (10==10){
-			    println "pass (～￣▽￣)～了"
-			    }else{
-			    println "failed ε=(´ο｀*)))唉"
-			    }
-		        }
-		    }
-		
-		}
-		
-		stage('查看dir和路径相关'){
-			steps{
-			script{
-				sh("ls -al ${env.WORKSPACE}")
-				sh("echo 输出当前的文件路径 ")
-				sh("cd ../test/")
-				sh('ls -lah ')
-				sh('pwd')
-				}
-				}		
-		}
-		
-//		stage('测试ssh远程操作command'){
-//			steps{
-//				sh('ssh 10.1.1.6 " mkdir 10116-file;echo 远程创建了一个文件;ls -lha > xpc.txt"')
-//				
-//			}
-//		}
-		
-
-
-
-	}
-
-
-
+    parameters {
+        省略内容……
+    }
+    environment {
+        省略内容……
+    }
+    stages {
+        省略内容……
+    }
+    post {
+        success {
+            emailext (
+                subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                    <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
+                to: "user1@qq.com,user2@qq.com",
+                from: "admin@sina.com"
+            )
+        }
+        failure {
+            emailext (
+                subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                    <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
+                to: "user1@qq.com,user2@qq.com",
+                from: "admin@sina.com"
+            )
+        }
+    }
 }
+
+
+
