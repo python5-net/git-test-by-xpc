@@ -3,8 +3,12 @@ pipeline {
 
 	stages{
 
-		stage('test email'){
+		stage('test email')
+		{
+			script{
 		sh('echo hello world')
+
+		}
 			}
 		}
 
