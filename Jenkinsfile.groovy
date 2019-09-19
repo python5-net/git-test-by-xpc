@@ -22,7 +22,7 @@ pipeline {
                 body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                     <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
                 to: "pengcheng.xu@suez.com",
-                from: "这里是测试发件人"
+                from: "pengcheng_suez@163.com"
             )
         }
         failure {
@@ -31,7 +31,7 @@ pipeline {
                 body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                     <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
                 to: "pengcheng.xu@suez.com",
-                from: "admin@sina.com"
+                from: "pengcheng_suez@163.com"
             )
         }
     }
